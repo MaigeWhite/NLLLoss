@@ -1,7 +1,0 @@
-/home/maijianqiang/NLLLossCase/NLLLoss_Case1/build/CMakeFiles/execute_op.dir
-/home/maijianqiang/NLLLossCase/NLLLoss_Case1/build/CMakeFiles/edit_cache.dir
-/home/maijianqiang/NLLLossCase/NLLLoss_Case1/build/CMakeFiles/rebuild_cache.dir
-/home/maijianqiang/NLLLossCase/NLLLoss_Case1/build/CMakeFiles/list_install_components.dir
-/home/maijianqiang/NLLLossCase/NLLLoss_Case1/build/CMakeFiles/install.dir
-/home/maijianqiang/NLLLossCase/NLLLoss_Case1/build/CMakeFiles/install/local.dir
-/home/maijianqiang/NLLLossCase/NLLLoss_Case1/build/CMakeFiles/install/strip.dir
