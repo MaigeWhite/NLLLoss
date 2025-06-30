@@ -1,0 +1,82 @@
+{
+  "binList": [
+    {
+      "implMode": "high_performance",
+      "int64Mode": false,
+      "simplifiedKeyMode": 0,
+      "simplifiedKey": [
+        "NLLLoss/d=0,p=1/0,2/3,2/0,2/0,2",
+        "NLLLoss/d=0,p=0/0,2/3,2/0,2/0,2",
+        "NLLLoss/d=1,p=1/0,2/3,2/0,2/0,2",
+        "NLLLoss/d=1,p=0/0,2/3,2/0,2/0,2"
+      ],
+      "staticKey": "dd6265d921a493f974f5a06fac815601f8dce5c6f0b00921542c9000263cd6ac,88d5876f24410497e5b88719c1d6d45515635bb8c1569c3f756368f9b6b9efbb",
+      "inputs": [
+        {
+          "name": "x",
+          "index": 0,
+          "dtype": "float32",
+          "format": "ND",
+          "paramType": "required",
+          "shape": [
+            -2
+          ],
+          "format_match_mode": "FormatAgnostic"
+        },
+        {
+          "name": "target",
+          "index": 1,
+          "dtype": "int32",
+          "format": "ND",
+          "paramType": "required",
+          "shape": [
+            -2
+          ],
+          "format_match_mode": "FormatAgnostic"
+        },
+        {
+          "name": "weight",
+          "index": 2,
+          "dtype": "float32",
+          "format": "ND",
+          "paramType": "required",
+          "shape": [
+            -2
+          ],
+          "format_match_mode": "FormatAgnostic"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "y",
+          "index": 0,
+          "dtype": "float32",
+          "format": "ND",
+          "paramType": "required",
+          "shape": [
+            -2
+          ],
+          "format_match_mode": "FormatAgnostic"
+        }
+      ],
+      "attrs": [
+        {
+          "name": "reduction",
+          "dtype": "str",
+          "value": ""
+        },
+        {
+          "name": "ignore_index",
+          "dtype": "int",
+          "value": 0
+        }
+      ],
+      "opMode": "dynamic",
+      "optionalInputMode": "gen_placeholder",
+      "deterministic": "ignore",
+      "binInfo": {
+        "jsonFilePath": "ascend910b/nll_loss/NLLLoss_1fcbaa80dce92b59e8af83b59108685e.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "NLLLoss": {
+    "dynamicRankSupport": true,
+    "simplifiedKeyMode": 0,
+    "optionalInputMode": "gen_placeholder",
+    "params": {
+      "inputs": [
+        {
+          "name": "x",
+          "index": 0,
+          "paramType": "required",
+          "formatMode": "static_nd_agnostic"
+        },
+        {
+          "name": "target",
+          "index": 1,
+          "paramType": "required",
+          "formatMode": "static_nd_agnostic"
+        },
+        {
+          "name": "weight",
+          "index": 2,
+          "paramType": "required",
+          "formatMode": "static_nd_agnostic"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "y",
+          "index": 0,
+          "paramType": "required",
+          "formatMode": "static_nd_agnostic"
+        }
+      ],
+      "attrs": [
+        {
+          "name": "reduction"
+        },
+        {
+          "name": "ignore_index"
+        }
+      ]
+    },
+    "binaryList": [
+      {
+        "coreType": 2,
+        "simplifiedKey": [
+          "NLLLoss/d=0,p=1/0,2/3,2/0,2/0,2",
+          "NLLLoss/d=0,p=0/0,2/3,2/0,2/0,2",
+          "NLLLoss/d=1,p=1/0,2/3,2/0,2/0,2",
+          "NLLLoss/d=1,p=0/0,2/3,2/0,2/0,2"
+        ],
+        "binPath": "ascend910b/nll_loss/NLLLoss_1fcbaa80dce92b59e8af83b59108685e.o",
+        "jsonPath": "ascend910b/nll_loss/NLLLoss_1fcbaa80dce92b59e8af83b59108685e.json"
+      }
+    ]
+  }
+}
