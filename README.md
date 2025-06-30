@@ -1,16 +1,60 @@
 # NLLLoss - Ascend C Custom Operator
 
-This project implements a **custom NLLLoss (Negative Log Likelihood Loss) operator** using **Ascend C** for the Ascend AI processor.
+## 📝 Operator Overview: NLLLoss (Negative Log Likelihood Loss)
+
+This custom operator implements the forward computation of **Negative Log Likelihood Loss (NLLLoss)**, a commonly used loss function for classification tasks during neural network training on Ascend AI processors.
 
 ---
 
-## 📌 Features
+## 🎯 Functionality Description
 
-- Implemented with Ascend C kernel
-- Supports multiple reduction modes
-- Includes multiple test cases for validation
+The operator computes the NLL loss for each sample based on:
+
+- **Input logits (`x`)**
+- **Target class indices (`target`)**
+- **Class weights (`weight`)**
+
+It supports three reduction modes for flexible output control:
+
+| Mode  | Description            | Output Shape |
+|-------|------------------------|--------------|
+| **1** | Per-sample loss output | `[N]`        |
+| **2** | Weighted average loss  | `[1]`        |
+| **3** | Total loss sum         | `[1]`        |
 
 ---
+
+## 📥 Input Parameters
+
+| Parameter | Description                       | Shape   |
+|-----------|---------------------------------|---------|
+| `x`       | Model prediction scores (logits) | `[N, C]` |
+| `target`  | Ground truth class index for each sample | `[N]` |
+| `weight`  | Weight for each class             | `[C]`   |
+| `shape`   | Tensor shape info, typically `[N, C]` | -       |
+| `mode`    | Output mode (1/2/3)              | Scalar  |
+
+---
+
+## ⚙️ Core Computation Logic
+
+For each sample:
+
+1. Select the score corresponding to the target class from `x`.
+2. Negate the score and apply the class-specific weight.
+3. Accumulate and output results according to the selected `mode`.
+
+---
+
+## ✅ Data Type Support
+
+- **Half-precision float (`half`)**
+- **Single-precision float (`float`)**
+
+Implemented using C++ templates for flexible data type support.
+
+---
+
 
 ## 📥 Clone the Repository
 
@@ -24,7 +68,7 @@ cd NLLLoss
 ```bash
 bash build.sh
 
-This will generate the installer package at:
+This will generate the installer package at
 ./build_out/custom_opp_ubuntu_aarch64.run
 ```
 
